@@ -139,11 +139,16 @@
                 labelSocial: 'SNS:',
                 labelDob: '生年月日:',
                 labelInvolved: '関与:',
+                name: 'John Doe',
+                companies: 'Company A, Company B',
+                social: '@johndoe on X',
+                dob: '1985-03-15',
+                involved: 'Anime X, Manga Y, Game Z',
                 bioTitle: '経歴と不正行為の概要',
                 bioText: 'John Doeは複数の大手ローカライズ企業で働いており、意図的な誤訳や政治的・文化的改変の事例が複数確認されています。特に原作に存在しない要素を挿入する行為が問題視されています。',
                 evidenceTitle: '証拠資料',
-                caption1: 'Before/After comparison showing added political dialogue not present in the original Japanese script.',
-                caption2: 'Internal memo or social media post admitting to intentional changes.'
+                caption1: '原作日本語スクリプトには存在しない政治的対話が追加されたBefore/After比較。',
+                caption2: '意図的な変更を認める内部メモまたはソーシャルメディア投稿。'
             },
             en: {
                 title: 'Localizer Accountability Project - John Doe',
@@ -156,6 +161,11 @@
                 labelSocial: 'Social Media:',
                 labelDob: 'Date of Birth:',
                 labelInvolved: 'Involved in:',
+                name: 'John Doe',
+                companies: 'Company A, Company B',
+                social: '@johndoe on X',
+                dob: '1985-03-15',
+                involved: 'Anime X, Manga Y, Game Z',
                 bioTitle: 'Background and Summary of Misconduct',
                 bioText: 'John Doe has worked for several major localization companies and has multiple documented cases of deliberate mistranslation and political/cultural alterations. Particularly problematic is the insertion of elements not present in the original work.',
                 evidenceTitle: 'Evidence',
@@ -178,12 +188,21 @@
             document.getElementById('cat-art').textContent = t.catArt;
             document.getElementById('cat-con').textContent = t.catCon;
 
+            // Labels
             document.getElementById('label-name').textContent = t.labelName;
             document.getElementById('label-companies').textContent = t.labelCompanies;
             document.getElementById('label-social').textContent = t.labelSocial;
             document.getElementById('label-dob').textContent = t.labelDob;
             document.getElementById('label-involved').textContent = t.labelInvolved;
-            
+
+            // Content values
+            document.getElementById('name').textContent = t.name;
+            document.getElementById('companies').textContent = t.companies;
+            document.getElementById('social').textContent = t.social;
+            document.getElementById('dob').textContent = t.dob;
+            document.getElementById('involved').textContent = t.involved;
+
+            // Bio & Evidence
             document.getElementById('bio-title').textContent = t.bioTitle;
             document.getElementById('bio-text').textContent = t.bioText;
             document.getElementById('evidence-title').textContent = t.evidenceTitle;
