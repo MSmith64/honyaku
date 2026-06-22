@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>翻訳者説明責任プロジェクト - [Name]</title>
+    <title>翻訳者説明責任プロジェクト - John Doe</title>
     <style>
         body {
             font-family: sans-serif;
@@ -97,14 +97,14 @@
                     <div class="info-item"><strong id="label-companies">会社:</strong> <span id="companies">Company A, Company B</span></div>
                     <div class="info-item"><strong id="label-social">SNS:</strong> <span id="social">@johndoe on X</span></div>
                     <div class="info-item"><strong id="label-dob">生年月日:</strong> <span id="dob">1985-03-15</span></div>
-                    <div class="info-item"><strong id="label-involved">関与:</strong> <span id="involved">Anime X, Manga Y, Game Z</span></div>
+                    <div class="info-item"><strong id="label-involved">関与:</strong> <span id="involved">アニメX、マンガY、ゲームZ</span></div>
                 </div>
             </div>
 
             <!-- Main Text Body -->
             <div id="bio">
                 <h2 id="bio-title">経歴と不正行為の概要</h2>
-                <p id="bio-text">John Doeは複数の大手ローカライズ企業で働いており、意図的な誤訳や政治的・文化的改変の事例が複数確認されています。特に...</p>
+                <p id="bio-text">John Doeは複数の大手ローカライズ企業で働いており、意図的な誤訳や政治的・文化的改変の事例が複数確認されています。特に原作に存在しない要素を挿入する行為が問題視されています。</p>
             </div>
 
             <!-- Evidence Section -->
@@ -113,15 +113,13 @@
                 
                 <div class="evidence-item">
                     <img id="evidence1" src="https://via.placeholder.com/800x450?text=Evidence+Screenshot+1" alt="Evidence 1">
-                    <p id="caption1">Before/After comparison showing added political dialogue not present in the original Japanese script.</p>
+                    <p id="caption1">原作脚本に存在しない政治的対話が追加された前後比較。</p>
                 </div>
                 
                 <div class="evidence-item">
                     <img id="evidence2" src="https://via.placeholder.com/800x450?text=Evidence+Screenshot+2" alt="Evidence 2">
-                    <p id="caption2">Internal memo or social media post admitting to intentional changes.</p>
+                    <p id="caption2">意図的な変更を認める内部メモまたはソーシャルメディア投稿。</p>
                 </div>
-                
-                <!-- Add more evidence items as needed -->
             </div>
         </div>
     </div>
@@ -139,15 +137,11 @@
                 labelSocial: 'SNS:',
                 labelDob: '生年月日:',
                 labelInvolved: '関与:',
-                name: 'John Doe',
-                companies: 'Company A, Company B',
-                social: '@johndoe on X',
-                dob: '1985-03-15',
-                involved: 'Anime X, Manga Y, Game Z',
+                involved: 'アニメX、マンガY、ゲームZ',
                 bioTitle: '経歴と不正行為の概要',
                 bioText: 'John Doeは複数の大手ローカライズ企業で働いており、意図的な誤訳や政治的・文化的改変の事例が複数確認されています。特に原作に存在しない要素を挿入する行為が問題視されています。',
                 evidenceTitle: '証拠資料',
-                caption1: '原作日本語スクリプトには存在しない政治的対話が追加されたBefore/After比較。',
+                caption1: '原作脚本に存在しない政治的対話が追加された前後比較。',
                 caption2: '意図的な変更を認める内部メモまたはソーシャルメディア投稿。'
             },
             en: {
@@ -161,10 +155,6 @@
                 labelSocial: 'Social Media:',
                 labelDob: 'Date of Birth:',
                 labelInvolved: 'Involved in:',
-                name: 'John Doe',
-                companies: 'Company A, Company B',
-                social: '@johndoe on X',
-                dob: '1985-03-15',
                 involved: 'Anime X, Manga Y, Game Z',
                 bioTitle: 'Background and Summary of Misconduct',
                 bioText: 'John Doe has worked for several major localization companies and has multiple documented cases of deliberate mistranslation and political/cultural alterations. Particularly problematic is the insertion of elements not present in the original work.',
@@ -194,15 +184,9 @@
             document.getElementById('label-social').textContent = t.labelSocial;
             document.getElementById('label-dob').textContent = t.labelDob;
             document.getElementById('label-involved').textContent = t.labelInvolved;
-
-            // Content values
-            document.getElementById('name').textContent = t.name;
-            document.getElementById('companies').textContent = t.companies;
-            document.getElementById('social').textContent = t.social;
-            document.getElementById('dob').textContent = t.dob;
+            
+            // Content that changes with language
             document.getElementById('involved').textContent = t.involved;
-
-            // Bio & Evidence
             document.getElementById('bio-title').textContent = t.bioTitle;
             document.getElementById('bio-text').textContent = t.bioText;
             document.getElementById('evidence-title').textContent = t.evidenceTitle;
