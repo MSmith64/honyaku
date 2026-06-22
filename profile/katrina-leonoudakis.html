@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻訳者説明責任プロジェクト - [Name]</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+        }
+        #lang-btn {
+            display: block;
+            margin: 10px auto;
+        }
+        nav {
+            background: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        #content {
+            padding: 20px 0;
+        }
+        .profile-info {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .profile-photo {
+            text-align: center;
+        }
+        .profile-photo img {
+            max-width: 100%;
+            max-height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .info-item {
+            margin-bottom: 12px;
+        }
+        .evidence {
+            margin-top: 40px;
+        }
+        .evidence-item {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .evidence-item img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+        }
+        @media (max-width: 768px) {
+            .profile-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">翻訳者説明責任プロジェクト</header>
+    <button id="lang-btn">English</button>
+    <nav>
+        <a id="cat-db" href="/">データベース</a>
+        <a id="cat-art" href="/articles.html">記事</a>
+        <a id="cat-con" href="/contact.html">お問い合わせ</a>
+    </nav>
+    <div class="container">
+        <div id="content">
+            <!-- Profile Photo -->
+            <div class="profile-photo" id="photo-container">
+                <img id="profile-photo" src="https://via.placeholder.com/400x300?text=Profile+Photo" alt="Profile Photo">
+            </div>
+
+            <!-- Profile Information -->
+            <div class="profile-info">
+                <div>
+                    <div class="info-item"><strong id="label-name">名前:</strong> <span id="name">John Doe</span></div>
+                    <div class="info-item"><strong id="label-companies">会社:</strong> <span id="companies">Company A, Company B</span></div>
+                    <div class="info-item"><strong id="label-social">SNS:</strong> <span id="social">@johndoe on X</span></div>
+                    <div class="info-item"><strong id="label-dob">生年月日:</strong> <span id="dob">1985-03-15</span></div>
+                    <div class="info-item"><strong id="label-involved">関与:</strong> <span id="involved">Anime X, Manga Y, Game Z</span></div>
+                </div>
+            </div>
+
+            <!-- Main Text Body -->
+            <div id="bio">
+                <h2 id="bio-title">経歴と不正行為の概要</h2>
+                <p id="bio-text">John Doeは複数の大手ローカライズ企業で働いており、意図的な誤訳や政治的・文化的改変の事例が複数確認されています。特に...</p>
+            </div>
+
+            <!-- Evidence Section -->
+            <div class="evidence">
+                <h2 id="evidence-title">証拠資料</h2>
+                
+                <div class="evidence-item">
+                    <img id="evidence1" src="https://via.placeholder.com/800x450?text=Evidence+Screenshot+1" alt="Evidence 1">
+                    <p id="caption1">Before/After comparison showing added political dialogue not present in the original Japanese script.</p>
+                </div>
+                
+                <div class="evidence-item">
+                    <img id="evidence2" src="https://via.placeholder.com/800x450?text=Evidence+Screenshot+2" alt="Evidence 2">
+                    <p id="caption2">Internal memo or social media post admitting to intentional changes.</p>
+                </div>
+                
+                <!-- Add more evidence items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const texts = {
+            ja: {
+                title: '翻訳者説明責任プロジェクト - John Doe',
+                button: 'English',
+                catDb: 'データベース',
+                catArt: '記事',
+                catCon: 'お問い合わせ',
+                labelName: '名前:',
+                labelCompanies: '会社:',
+                labelSocial: 'SNS:',
+                labelDob: '生年月日:',
+                labelInvolved: '関与:',
+                bioTitle: '経歴と不正行為の概要',
+                bioText: 'John Doeは複数の大手ローカライズ企業で働いており、意図的な誤訳や政治的・文化的改変の事例が複数確認されています。特に原作に存在しない要素を挿入する行為が問題視されています。',
+                evidenceTitle: '証拠資料',
+                caption1: 'Before/After comparison showing added political dialogue not present in the original Japanese script.',
+                caption2: 'Internal memo or social media post admitting to intentional changes.'
+            },
+            en: {
+                title: 'Localizer Accountability Project - John Doe',
+                button: '日本語',
+                catDb: 'Database',
+                catArt: 'Articles',
+                catCon: 'Contact',
+                labelName: 'Name:',
+                labelCompanies: 'Companies:',
+                labelSocial: 'Social Media:',
+                labelDob: 'Date of Birth:',
+                labelInvolved: 'Involved in:',
+                bioTitle: 'Background and Summary of Misconduct',
+                bioText: 'John Doe has worked for several major localization companies and has multiple documented cases of deliberate mistranslation and political/cultural alterations. Particularly problematic is the insertion of elements not present in the original work.',
+                evidenceTitle: 'Evidence',
+                caption1: 'Before/After comparison showing added political dialogue not present in the original Japanese script.',
+                caption2: 'Internal memo or social media post admitting to intentional changes.'
+            }
+        };
+
+        let currentLang = 'ja';
+
+        function switchLang() {
+            currentLang = currentLang === 'ja' ? 'en' : 'ja';
+            document.documentElement.lang = currentLang;
+            const t = texts[currentLang];
+            
+            document.title = t.title;
+            document.getElementById('header').textContent = t.title.split(' - ')[0];
+            document.getElementById('lang-btn').textContent = t.button;
+            document.getElementById('cat-db').textContent = t.catDb;
+            document.getElementById('cat-art').textContent = t.catArt;
+            document.getElementById('cat-con').textContent = t.catCon;
+
+            document.getElementById('label-name').textContent = t.labelName;
+            document.getElementById('label-companies').textContent = t.labelCompanies;
+            document.getElementById('label-social').textContent = t.labelSocial;
+            document.getElementById('label-dob').textContent = t.labelDob;
+            document.getElementById('label-involved').textContent = t.labelInvolved;
+            
+            document.getElementById('bio-title').textContent = t.bioTitle;
+            document.getElementById('bio-text').textContent = t.bioText;
+            document.getElementById('evidence-title').textContent = t.evidenceTitle;
+            document.getElementById('caption1').textContent = t.caption1;
+            document.getElementById('caption2').textContent = t.caption2;
+        }
+
+        document.getElementById('lang-btn').addEventListener('click', switchLang);
+    </script>
+</body>
+</html>
